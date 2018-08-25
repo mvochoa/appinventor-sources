@@ -42,7 +42,6 @@ public class PrintManager extends AndroidNonvisibleComponent {
 
     @SimpleFunction(description = "PrintHTMLText imprime una página web a base de cadena de HTML")
     public void PrintHTMLText(String textHTML, String baseURL) {
-        webView = new WebView(container.$context());
         if (baseURL.equals("")) {
             baseURL = null;
         }
@@ -51,7 +50,6 @@ public class PrintManager extends AndroidNonvisibleComponent {
 
     @SimpleFunction(description = "PrintURLWeb imprime una página web en base a una dirección URL")
     public void PrintURLWeb(String Url) {
-        webView = new WebView(container.$context());
         webView.loadUrl(Url);
     }
 
