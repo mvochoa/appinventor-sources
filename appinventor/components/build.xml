@@ -611,7 +611,6 @@
          basedir="${ExternalComponent.dir}"
          includes="${extensionType}/"
     />
-
   </target>
 
   <target name="extensions" depends="ExternalComponentGenerator, jarAllExtensions, dexAllExtensions">
@@ -623,6 +622,11 @@
         </dirset>
       </path>
     </foreach>
+
+    <mkdir dir="${Extensions.dir}/../../aixs" />
+    <copy todir="${Extensions.dir}/../../aixs" overwrite="true">
+      <fileset dir="${Extensions.dir}"/>
+    </copy>
   </target>
 
 </project>
